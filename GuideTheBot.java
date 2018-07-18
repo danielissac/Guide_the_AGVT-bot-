@@ -1,8 +1,3 @@
-// A Java program for Dijkstra's
-// single source shortest path 
-// algorithm. The program is for
-// adjacency matrix representation
-// of the graph.
 import java.util.*;
 import java.sql.*;
 import java.io.FileInputStream;
@@ -608,7 +603,7 @@ class GuideTheBot {
 			try
 			{
 				Class.forName("com.mysql.jdbc.Driver");  
-				Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/ych","root","praisethelord");  //use your db credentials
+				Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/location","root","praisethelord");  //use your db credentials
 				Statement stmt=con.createStatement();  
 				ResultSet rs=stmt.executeQuery("select unique_rfid from location_info where reference="+a);
 				rs.next();
@@ -628,7 +623,7 @@ class GuideTheBot {
 			{
 				Class.forName("com.mysql.jdbc.Driver");  
 				Connection con=DriverManager.getConnection(  
-				"jdbc:mysql://localhost:3306/ych","root","praisethelord");  //use your db credentials
+				"jdbc:mysql://localhost:3306/location","root","praisethelord");  //use your db credentials
 				Statement stmt=con.createStatement();  
 				ResultSet rs=stmt.executeQuery("select reference from location_info where bin_location='"+bin+"'");  
 				rs.next();
@@ -647,7 +642,7 @@ class GuideTheBot {
 		try{  
 				Class.forName("com.mysql.jdbc.Driver");  
 				Connection con=DriverManager.getConnection(  
-				"jdbc:mysql://localhost:3306/ych","root","praisethelord");  //use your db credentials
+				"jdbc:mysql://localhost:3306/location","root","praisethelord");  //use your db credentials
 				Statement stmt=con.createStatement();  
 				ResultSet rs=stmt.executeQuery("select bin_location from location_info where unique_rfid='"+str+"'");
 				rs.last();
