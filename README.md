@@ -9,15 +9,24 @@ Programming Language Used : Java
 Scenario:(Automated Warehouse Management System)
     Once the order is received, the orderlist(contains ordered_item) is fed into the bot via Orders.xlsx file using Apache POI. Shortest path Algorithm calculates the minimum distance between from each source to destination. The shortest route of the given map with directions is fed into the AGVT. Finally AGVT start moving and directed to the nearest target location to pick the ordered_item and from there it will directed to the next location based on the shortest route.This process continues until bot completes its the task.
     The entire area of the warehouse (Map) will be converted to multidimensional array in order to calculate the shortest path.
+    
+    
+    
 Pathmatrix structure:
     if there is no path exists between source and destination then put "0"
     if there is path exists between source and destination then put "3L"
     "3L" - means destination is at 3 units distance from the source and its is Left (direction) to source.   
     The pathmatrix contents varies depends upon your warehouse blueprint.
+    
+    
 Database Structure:
-    Feed the location.xlsx(change this file according to your Warehouse blueprint) file to the database called location.sql using Apache       POI.
+    Feed the location.xlsx(change this file according to your Warehouse blueprint) file to the database called location.sql using Apache     POI.
+    
+    
 Orders.xlsx:
     This is the first file that (contains ordered_items and ordered_number and quantity of ordered items) fed into the bot
+    
+    
     
 if you configured everything perfectly,you would get the command paragraph for the bot like this,
 
